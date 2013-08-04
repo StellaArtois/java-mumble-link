@@ -12,9 +12,6 @@ public class MumbleLink
 	public native void updateMumble(
 		float avatarPosX, float avatarPosY, float avatarPosZ,
 		float avatarForwardX, float avatarForwardY, float avatarForwardZ,
-		float avatarUpX, float avatarUpY, float avatarUpZ,
-		float cameraPosX, float cameraPosY, float cameraPosZ,
-		float cameraForwardX, float cameraForwardY, float cameraForwardZ,
-		float cameraUpX, float cameraUpY, float cameraUpZ
+		float avatarUpX, float avatarUpY, float avatarUpZ
 	);
 }

@@ -5,6 +5,8 @@ This is a JNI library to talk to the Mumble Link plugin.
 You can find the Mumble project at:
 http://mumble.info
 
+Heavily modified by mabrowning for the Minecraft VR project.
+
 Note:
 A similar library exists inside the mod_mumblelink project at:
 http://sourceforge.net/projects/modmumblelink/
