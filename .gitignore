@@ -9,6 +9,7 @@ JMumbleLibrary/Debug
 JMumbleLibrary/x64/
 JMumbleLibrary/target/
 *.swp
+*.suo
 *.pdb
 *.lib
 *.exp
