@@ -5,5 +5,10 @@
 *~
 JMumble/target/
 JMumbleLibrary/build/
+JMumbleLibrary/Debug
+JMumbleLibrary/x64/
 JMumbleLibrary/target/
 *.swp
+*.pdb
+*.lib
+*.exp

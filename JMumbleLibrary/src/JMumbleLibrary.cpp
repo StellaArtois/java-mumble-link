@@ -60,8 +60,7 @@ static HANDLE hMap;
 int shmfd;
 #endif
 
-__attribute__((constructor))
-void init()
+JNIEXPORT void JNICALL Java_net_aib42_mumblelink_MumbleLink_init (JNIEnv *, jobject)
 {
 	linkInfo.update = true;
 #ifdef WIN32
@@ -89,8 +88,7 @@ void init()
 #endif
 }
 
-__attribute__((destructor))
-void deinit()
+JNIEXPORT void JNICALL Java_net_aib42_mumblelink_MumbleLink_deinit(JNIEnv *, jobject)
 {
 #ifdef WIN32
 	if (hMap != NULL) {

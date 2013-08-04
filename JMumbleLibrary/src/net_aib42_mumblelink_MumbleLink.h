@@ -9,6 +9,22 @@ extern "C" {
 #endif
 /*
  * Class:     net_aib42_mumblelink_MumbleLink
+ * Method:    init
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_net_aib42_mumblelink_MumbleLink_init
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     net_aib42_mumblelink_MumbleLink
+ * Method:    deinit
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_net_aib42_mumblelink_MumbleLink_deinit
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     net_aib42_mumblelink_MumbleLink
  * Method:    setNameAndDescription
  * Signature: (Ljava/lang/String;Ljava/lang/String;)V
  */

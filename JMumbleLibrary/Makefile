@@ -5,6 +5,7 @@ ifeq ($(UNAME), Darwin)
 all: natives/osx/libJMumbleLibrary64.jnilib natives/osx/libJMumbleLibrary.jnilib
 
 build/JMumbleLibrary.o: src/JMumbleLibrary.cpp
+	-@mkdir $(dir $@) 
 	g++ \
 	-fno-rtti \
 	-m32 \
@@ -13,7 +14,8 @@ build/JMumbleLibrary.o: src/JMumbleLibrary.cpp
 	-c $< \
 	-o $@
 
-build/JMumbleLibrary64.o: JMumbleLibrary.cpp
+build/JMumbleLibrary64.o: src/JMumbleLibrary.cpp
+	-@mkdir $(dir $@) 
 	g++ \
 	-fno-rtti \
 	"-I/System/Library/Frameworks/JavaVM.framework/Versions/Current/Headers" \
@@ -22,6 +24,7 @@ build/JMumbleLibrary64.o: JMumbleLibrary.cpp
 	-o $@
 
 natives/osx/libJMumbleLibrary.jnilib: build/JMumbleLibrary.o
+	-@mkdir $(dir $@) 
 	g++ \
 		-dynamiclib \
 		-fno-rtti \
@@ -30,6 +33,7 @@ natives/osx/libJMumbleLibrary.jnilib: build/JMumbleLibrary.o
 		$< 
 
 natives/osx/libJMumbleLibrary64.jnilib: build/JMumbleLibrary64.o
+	-@mkdir $(dir $@) 
 	g++ \
 		-dynamiclib \
 		-fno-rtti \
