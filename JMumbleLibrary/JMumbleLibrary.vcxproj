@@ -71,24 +71,24 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(ProjectDir)\src\JDK\Win32\include;$(ProjectDir)\src\JDK\Win32\include\win32;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\natives\windows\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>Z:\mc-dev\minecrift\JRift\JRiftLibrary\JDK\Win32\include;Z:\mc-dev\minecrift\JRift\JRiftLibrary\JDK\Win32\include\win32;Z:\mc-dev\minecrift\JRift\JRiftLibrary\LibOVR\Include;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\natives\windows\</OutDir>
     <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>Z:\mc-dev\minecrift\JRift\JRiftLibrary\JDK\Win32\include;Z:\mc-dev\minecrift\JRift\JRiftLibrary\JDK\Win32\include\win32;Z:\mc-dev\minecrift\JRift\JRiftLibrary\LibOVR\Include;$(IncludePath)</IncludePath>
     <LibraryPath>Z:\mc-dev\minecrift\JRift\JRiftLibrary\LibOVR\Lib\Win32;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)\natives\windows\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>Z:\mc-dev\minecrift\JRift\JRiftLibrary\JDK\Win32\include;Z:\mc-dev\minecrift\JRift\JRiftLibrary\JDK\Win32\include\win32;Z:\mc-dev\minecrift\JRift\JRiftLibrary\LibOVR\Include;$(IncludePath)</IncludePath>
     <LibraryPath>Z:\mc-dev\minecrift\JRift\JRiftLibrary\LibOVR\Lib\x64;$(LibraryPath)</LibraryPath>
-    <TargetName>JRiftLibrary64</TargetName>
+    <OutDir>$(ProjectDir)\natives\windows\</OutDir>
+    <TargetName>$(ProjectName)64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

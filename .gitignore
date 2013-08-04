@@ -6,6 +6,7 @@
 JMumble/target/
 JMumbleLibrary/build/
 JMumbleLibrary/Debug
+JMumbleLibrary/Release
 JMumbleLibrary/x64/
 JMumbleLibrary/target/
 *.swp
