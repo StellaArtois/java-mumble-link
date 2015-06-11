@@ -43,47 +43,51 @@ natives/osx/libJMumbleLibrary64.jnilib: build/JMumbleLibrary64.o
 else
 ifeq ($(UNAME), Linux)
 
+LINUX_JDK_HOME:=/usr/lib/jvm/java-7-openjdk-amd64
 
 all: natives/linux/libJMumbleLibrary64.so natives/linux/libJMumbleLibrary.so
 
+32: natives/linux/libJMumbleLibrary.so
 
-build/JMumbleLibrary.o: src/JMumbleLibrary.cpp
-	-@mkdir $(dir $@) 
+64: natives/linux/libJMumbleLibrary64.so
+
+build/JMumbleLibrary.o: src/JMumbleLibrary.cpp 
 	g++ \
 	-m32 \
 	-fPIC \
 	-fno-rtti \
-	"-I/usr/lib/jvm/java-6-openjdk-amd64/include/" \
+	"-I${LINUX_JDK_HOME}/include/" \
 	-c $< \
 	-o $@
 
-build/JMumbleLibrary64.o: src/JMumbleLibrary.cpp
-	-@mkdir $(dir $@) 
+build/JMumbleLibrary64.o: src/JMumbleLibrary.cpp 
 	g++ \
+	-m64 \
 	-fPIC \
 	-fno-rtti \
-	"-I/usr/lib/jvm/java-6-openjdk-amd64/include/" \
+	"-I${LINUX_JDK_HOME}/include/" \
 	-c $< \
 	-o $@
 
 natives/linux/libJMumbleLibrary.so: build/JMumbleLibrary.o
-	-@mkdir -p $(dir $@) 
 	g++ \
 		-m32 \
 		-fno-rtti \
 		-shared \
 		-o $@ \
-		"-I/usr/lib/jvm/java-6-openjdk-amd64/include/" \
-		$< 
+		"-I${LINUX_JDK_HOME}/include/" \
+		$< \
+		-lrt
 
 natives/linux/libJMumbleLibrary64.so: build/JMumbleLibrary64.o
-	-@mkdir -p $(dir $@) 
 	g++ \
+		-m64 \
 		-fno-rtti \
 		-shared \
 		-o $@ \
-		"-I/usr/lib/jvm/java-6-openjdk-amd64/include/" \
-		$< 
+		"-I${LINUX_JDK_HOME}/include/" \
+		$< \
+		-lrt
 
 endif
 endif

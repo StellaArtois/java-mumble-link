@@ -27,4 +27,19 @@ public class MumbleLink
 		float avatarForwardX, float avatarForwardY, float avatarForwardZ,
 		float avatarUpX, float avatarUpY, float avatarUpZ
 	);
+
+	public static void main(String[] args) {
+		try {
+			MumbleLink.loadLibrary();
+			MumbleLink mumbleLink = new MumbleLink("1", "1");
+			mumbleLink.setIdentityAndContext("User", "Server");
+			mumbleLink.updateMumble(
+						1f, 0f, 1f,
+						0f, 0f, 0f,
+						1f, 1f, 0f);
+			mumbleLink.deinit();
+		} catch (Exception e) {
+			System.err.println("Error in [MumbleLink library]: " + e.toString());
+		}
+	}
 }
