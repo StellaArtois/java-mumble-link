@@ -6,7 +6,7 @@
 
   <groupId>net.aib42.mumblelink</groupId>
   <artifactId>JMumble</artifactId>
-  <version>1.0</version>
+  <version>1.11</version>
 
   <name>JMumble</name>
   <description>Java Wrapper (JNI) for the MumbleLink SharedMemory interface under Windows, OSX, and Linux.</description>
